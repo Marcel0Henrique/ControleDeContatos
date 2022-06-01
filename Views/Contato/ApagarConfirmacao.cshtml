@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "Confirmação";
+}
+
+<div class="container">
+    <div class="border border-3 rounded-3 border-danger position-absolute top-50 start-50 translate-middle">
+        <div class="card-body">
+            <h1 class="display-6">Confimar exclução?</h1>
+            <div class="d-grid gap-2">
+                <a role="button" class="btn btn-outline-danger btn-lg" asp-controller="Contato" asp-action="Apagar">Confirmar Exclução</a>
+                <a role="button" class="btn btn-secondary btn-lg" asp-controller="Contato" asp-action="Index">Cancelar</a>
+            </div>
+        </div>
+    </div>
+</div>

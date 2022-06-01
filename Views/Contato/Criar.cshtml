@@ -1,0 +1,39 @@
+@*? @model vincula o model ao controller
+*@
+
+@model ContatoModel
+@{
+    ViewData["Title"] = "Cadastrar contato";
+}
+
+<div class="container position-absolute top-50 start-50 translate-middle">
+    <div class="border border-2 rounded-3 border-success">
+        <div class="card-body">
+            <h1 class="display-6 card-title text-center">Cadastro de Contato</h1>
+
+            <div class="container">
+            <!--vinculando ao controller e a ação criar do post -->
+                <form asp-controller="Contato" asp-action="Criar" method="post">
+                    <div class="form-group mb-4">
+                        <label for="Name">Nome</label>
+                        <input asp-for="Nome" type="text" class="form-control" id="InputName" placeholder="Nome Completo" required>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="Email">Endereço de email</label>
+                        <input asp-for="Email" type="email" class="form-control" placeholder="email@email.com" required>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="Cell">Celular</label>
+                        <input asp-for="Celular" type="text" class="form-control" placeholder="(xx) x xxxx-xxxx" required>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-success btn-lg">Cadastrar</button>
+                        <a role="button" class="btn btn-secondary btn-lg" asp-controller="Contato"
+                            asp-action="Index">Voltar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
